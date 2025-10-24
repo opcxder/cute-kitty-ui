@@ -1,0 +1,164 @@
+# API Reference
+
+## Core Components
+
+### Common Props
+
+All core components share these props:
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `primaryColor` | string | '#000000' | Main color of the cat |
+| `secondaryColor` | string | '#FFFFFF' | Secondary color for details |
+| `size` | 'small' \| 'medium' \| 'large' \| number | 'medium' | Size of the component |
+| `emotion` | string | 'neutral' | Cat's facial expression |
+| `animated` | boolean | false | Whether the cat should be animated |
+| `animationSpeed` | 'slow' \| 'normal' \| 'fast' | 'normal' | Speed of animations |
+
+### SittingCat
+
+```tsx
+import { SittingCat } from '@kitty-ui/registry';
+
+<SittingCat 
+  primaryColor="#FF6B6B"
+  secondaryColor="#FFFFFF" 
+  size="medium"
+  emotion="happy"
+  animated={true}
+  animationSpeed="normal"
+/>
+```
+
+### LyingCat
+
+```tsx
+import { LyingCat } from '@kitty-ui/registry';
+
+<LyingCat 
+  primaryColor="#4ECDC4"
+  secondaryColor="#FFFFFF" 
+  size="medium"
+  emotion="relaxed"
+  animated={true}
+  animationSpeed="slow"
+/>
+```
+
+### StandingCat
+
+```tsx
+import { StandingCat } from '@kitty-ui/registry';
+
+<StandingCat 
+  primaryColor="#FFD166"
+  secondaryColor="#FFFFFF" 
+  size="medium"
+  emotion="alert"
+  animated={true}
+  animationSpeed="normal"
+/>
+```
+
+### SleepingCat
+
+```tsx
+import { SleepingCat } from '@kitty-ui/registry';
+
+<SleepingCat 
+  primaryColor="#6B5CA5"
+  secondaryColor="#FFFFFF" 
+  size="medium"
+  emotion="sleeping"
+  animated={true}
+  animationSpeed="slow"
+/>
+```
+
+### PlayingCat
+
+```tsx
+import { PlayingCat } from '@kitty-ui/registry';
+
+<PlayingCat 
+  primaryColor="#EF476F"
+  secondaryColor="#FFFFFF" 
+  size="medium"
+  emotion="excited"
+  animated={true}
+  animationSpeed="fast"
+/>
+```
+
+## Composition Components
+
+### HoldingSignCat
+
+```tsx
+import { HoldingSignCat } from '@kitty-ui/registry';
+
+<HoldingSignCat 
+  primaryColor="#FF6B6B"
+  secondaryColor="#FFFFFF"
+  signText="Hello World!"
+  signBackgroundColor="#F8F9FA"
+  signTextColor="#212529"
+  signBorderColor="#DEE2E6"
+  size="medium"
+  emotion="happy"
+  animated={true}
+/>
+```
+
+#### Additional Props
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `signText` | string | 'Hello!' | Text to display on the sign |
+| `signBackgroundColor` | string | '#FFFFFF' | Background color of the sign |
+| `signTextColor` | string | '#000000' | Color of the text on the sign |
+| `signBorderColor` | string | '#000000' | Border color of the sign |
+
+### PeekingCat
+
+```tsx
+import { PeekingCat } from '@kitty-ui/registry';
+
+<PeekingCat 
+  primaryColor="#4ECDC4"
+  secondaryColor="#FFFFFF"
+  peekFrom="left"
+  peekAmount={0.5}
+  size="medium"
+  emotion="curious"
+  animated={true}
+/>
+```
+
+#### Additional Props
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `peekFrom` | 'left' \| 'right' \| 'top' \| 'bottom' | 'left' | Direction from which the cat peeks |
+| `peekAmount` | number | 0.5 | How much of the cat is visible (0-1) |
+
+### FaceOnlyCat
+
+```tsx
+import { FaceOnlyCat } from '@kitty-ui/registry';
+
+<FaceOnlyCat 
+  primaryColor="#FFD166"
+  secondaryColor="#FFFFFF"
+  showEars={true}
+  size="medium"
+  emotion="happy"
+  animated={true}
+/>
+```
+
+#### Additional Props
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `showEars` | boolean | true | Whether to show the cat's ears |

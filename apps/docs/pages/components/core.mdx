@@ -1,0 +1,101 @@
+# Core Components
+
+Kitty-UI provides five core cat components in different poses.
+
+## SittingCat
+
+A cat in a sitting pose.
+
+```jsx
+import { SittingCat } from '@kitty-ui/registry';
+
+<SittingCat 
+  primaryColor="#FF6B6B"
+  secondaryColor="#FFFFFF" 
+  size="medium"
+  emotion="happy"
+  animated={true}
+  animationSpeed="normal"
+/>
+```
+
+## LyingCat
+
+A cat in a lying pose.
+
+```jsx
+import { LyingCat } from '@kitty-ui/registry';
+
+<LyingCat 
+  primaryColor="#4ECDC4"
+  secondaryColor="#FFFFFF" 
+  size="medium"
+  emotion="relaxed"
+  animated={true}
+  animationSpeed="slow"
+/>
+```
+
+## StandingCat
+
+A cat in a standing pose.
+
+```jsx
+import { StandingCat } from '@kitty-ui/registry';
+
+<StandingCat 
+  primaryColor="#FFD166"
+  secondaryColor="#FFFFFF" 
+  size="medium"
+  emotion="alert"
+  animated={true}
+  animationSpeed="normal"
+/>
+```
+
+## SleepingCat
+
+A cat in a sleeping pose.
+
+```jsx
+import { SleepingCat } from '@kitty-ui/registry';
+
+<SleepingCat 
+  primaryColor="#6B5CA5"
+  secondaryColor="#FFFFFF" 
+  size="medium"
+  emotion="sleeping"
+  animated={true}
+  animationSpeed="slow"
+/>
+```
+
+## PlayingCat
+
+A cat in a playful pose.
+
+```jsx
+import { PlayingCat } from '@kitty-ui/registry';
+
+<PlayingCat 
+  primaryColor="#EF476F"
+  secondaryColor="#FFFFFF" 
+  size="medium"
+  emotion="excited"
+  animated={true}
+  animationSpeed="fast"
+/>
+```
+
+## Common Props
+
+All core components accept these props:
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `primaryColor` | string | '#000000' | Main color of the cat |
+| `secondaryColor` | string | '#FFFFFF' | Secondary color for details |
+| `size` | 'small' \| 'medium' \| 'large' \| number | 'medium' | Size of the component |
+| `emotion` | string | 'neutral' | Cat's facial expression |
+| `animated` | boolean | false | Whether the cat should be animated |
+| `animationSpeed` | 'slow' \| 'normal' \| 'fast' | 'normal' | Speed of animations |

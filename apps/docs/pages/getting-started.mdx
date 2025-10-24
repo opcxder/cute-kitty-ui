@@ -1,0 +1,80 @@
+# Getting Started
+
+## Installation
+
+You can install Kitty-UI using our CLI tool or directly with your package manager.
+
+### Using the CLI (Recommended)
+
+```bash
+# Install the CLI globally
+npm install -g @kitty-ui/cli
+
+# Create a new project with Kitty-UI
+kitty-ui create my-cat-app
+
+# Or add to an existing project
+kitty-ui install --all
+```
+
+### Manual Installation
+
+```bash
+# Using npm
+npm install @kitty-ui/core @kitty-ui/registry
+
+# Using yarn
+yarn add @kitty-ui/core @kitty-ui/registry
+
+# Using pnpm
+pnpm add @kitty-ui/core @kitty-ui/registry
+```
+
+## Basic Usage
+
+Import the components you need from `@kitty-ui/registry`:
+
+```jsx
+import { SittingCat } from '@kitty-ui/registry';
+
+function App() {
+  return (
+    <SittingCat 
+      primaryColor="#FF6B6B" 
+      emotion="happy" 
+      animated={true} 
+    />
+  );
+}
+```
+
+## Available Components
+
+Kitty-UI provides several types of components:
+
+### Core Components
+
+- `SittingCat` - A cat in a sitting pose
+- `LyingCat` - A cat in a lying pose
+- `StandingCat` - A cat in a standing pose
+- `SleepingCat` - A cat in a sleeping pose
+- `PlayingCat` - A cat in a playful pose
+
+### Composition Components
+
+- `HoldingSignCat` - A cat holding a customizable sign
+- `PeekingCat` - A cat peeking from an edge of the container
+- `FaceOnlyCat` - Just the face of a cat
+
+## Customization
+
+All components accept the following common props:
+
+- `primaryColor` - Main color of the cat
+- `secondaryColor` - Secondary color for details
+- `size` - Size of the component ('small', 'medium', 'large', or a number)
+- `emotion` - Cat's facial expression ('happy', 'sad', 'excited', etc.)
+- `animated` - Whether the cat should be animated
+- `animationSpeed` - Speed of animations ('slow', 'normal', 'fast')
+
+Specific components may have additional props. Check the Components section for details.

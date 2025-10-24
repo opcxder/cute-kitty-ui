@@ -1,0 +1,45 @@
+{
+  "name": "@kitty-ui/cli",
+  "version": "0.1.0",
+  "description": "CLI tool for installing Kitty-UI components",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "kitty-ui": "./dist/index.js"
+  },
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "lint": "eslint src/**/*.ts",
+    "clean": "rm -rf dist node_modules",
+    "test": "vitest run"
+  },
+  "files": [
+    "dist",
+    "templates"
+  ],
+  "keywords": [
+    "kitty-ui",
+    "cli",
+    "react",
+    "components"
+  ],
+  "dependencies": {
+    "@kitty-ui/core": "workspace:*",
+    "@kitty-ui/registry": "workspace:*",
+    "chalk": "^4.1.2",
+    "commander": "^11.0.0",
+    "fs-extra": "^11.1.1",
+    "inquirer": "^8.2.5",
+    "ora": "^5.4.1"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^11.0.1",
+    "@types/inquirer": "^8.2.6",
+    "@types/node": "^18.16.0",
+    "eslint": "^8.40.0",
+    "tsup": "^6.7.0",
+    "typescript": "^5.0.4",
+    "vitest": "^0.31.0"
+  }
+}

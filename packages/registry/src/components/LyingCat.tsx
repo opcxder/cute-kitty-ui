@@ -1,0 +1,73 @@
+import React from 'react';
+import { KittyBaseProps } from '@kitty-ui/core';
+import { CatHead } from '../parts/CatHead';
+import { CatBody } from '../parts/CatBody';
+import { CatLegs } from '../parts/CatLegs';
+import { CatTail } from '../parts/CatTail';
+
+export interface LyingCatProps extends KittyBaseProps {
+  emotion?: 'happy' | 'sad' | 'excited' | 'sleepy' | 'curious' | 'angry';
+}
+
+export const LyingCat: React.FC<LyingCatProps> = ({
+  primaryColor = '#FFA500',
+  secondaryColor = '#FFFFFF',
+  size = 'medium',
+  emotion = 'sleepy',
+  animated = false,
+  animationSpeed = 'normal',
+  className,
+  style,
+}) => {
+  // Calculate size in pixels
+  const sizeMap = {
+    small: 120,
+    medium: 180,
+    large: 240,
+  };
+  const pixelSize = typeof size === 'number' ? size : sizeMap[size];
+  const height = pixelSize * 0.6; // Lying cat is wider than tall
+
+  return (
+    <svg
+      width={pixelSize}
+      height={height}
+      viewBox="0 0 120 70"
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={style}
+    >
+      <g>
+        <CatBody 
+          primaryColor={primaryColor} 
+          secondaryColor={secondaryColor}
+          pose="lying"
+          animated={animated}
+          animationSpeed={animationSpeed}
+        />
+        <CatLegs 
+          primaryColor={primaryColor} 
+          secondaryColor={secondaryColor}
+          pose="lying"
+          animated={animated}
+          animationSpeed={animationSpeed}
+        />
+        <CatTail 
+          primaryColor={primaryColor} 
+          secondaryColor={secondaryColor}
+          pose="lying"
+          animated={animated}
+          animationSpeed={animationSpeed}
+        />
+        <CatHead 
+          primaryColor={primaryColor} 
+          secondaryColor={secondaryColor}
+          emotion={emotion}
+          pose="lying"
+          animated={animated}
+          animationSpeed={animationSpeed}
+        />
+      </g>
+    </svg>
+  );
+};

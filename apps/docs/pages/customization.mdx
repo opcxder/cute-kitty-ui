@@ -1,0 +1,98 @@
+# Customization
+
+Kitty-UI components are designed to be highly customizable to fit your application's design system.
+
+## Color Customization
+
+All components accept `primaryColor` and `secondaryColor` props:
+
+```jsx
+<SittingCat 
+  primaryColor="#FF6B6B" // Main cat color
+  secondaryColor="#FFFFFF" // Details color
+/>
+```
+
+## Size Options
+
+Components can be sized using predefined options or custom values:
+
+```jsx
+// Predefined sizes
+<SittingCat size="small" />
+<SittingCat size="medium" /> // Default
+<SittingCat size="large" />
+
+// Custom size (number in pixels)
+<SittingCat size={150} />
+```
+
+## Emotions
+
+Change the cat's facial expression:
+
+```jsx
+<SittingCat emotion="happy" />
+<SittingCat emotion="sad" />
+<SittingCat emotion="excited" />
+<SittingCat emotion="relaxed" />
+<SittingCat emotion="alert" />
+<SittingCat emotion="sleeping" />
+```
+
+## Animation
+
+Enable animations and control their speed:
+
+```jsx
+// Enable animation
+<SittingCat animated={true} />
+
+// Control animation speed
+<SittingCat 
+  animated={true} 
+  animationSpeed="slow" 
+/>
+
+<SittingCat 
+  animated={true} 
+  animationSpeed="normal" // Default
+/>
+
+<SittingCat 
+  animated={true} 
+  animationSpeed="fast" 
+/>
+```
+
+## Component-Specific Customization
+
+Some components have additional customization options:
+
+### HoldingSignCat
+
+```jsx
+<HoldingSignCat 
+  signText="Hello World!"
+  signBackgroundColor="#F8F9FA"
+  signTextColor="#212529"
+  signBorderColor="#DEE2E6"
+/>
+```
+
+### PeekingCat
+
+```jsx
+<PeekingCat 
+  peekFrom="left" // 'left', 'right', 'top', or 'bottom'
+  peekAmount={0.5} // How much of the cat is visible (0-1)
+/>
+```
+
+### FaceOnlyCat
+
+```jsx
+<FaceOnlyCat 
+  showEars={true} // Whether to show the cat's ears
+/>
+```

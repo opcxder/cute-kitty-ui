@@ -1,0 +1,92 @@
+# Composition Components
+
+Kitty-UI provides specialized composition components for more complex use cases.
+
+## HoldingSignCat
+
+A cat holding a customizable sign.
+
+```jsx
+import { HoldingSignCat } from '@kitty-ui/registry';
+
+<HoldingSignCat 
+  primaryColor="#FF6B6B"
+  secondaryColor="#FFFFFF"
+  signText="Hello World!"
+  signBackgroundColor="#F8F9FA"
+  signTextColor="#212529"
+  size="medium"
+  emotion="happy"
+  animated={true}
+/>
+```
+
+### Additional Props
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `signText` | string | 'Hello!' | Text to display on the sign |
+| `signBackgroundColor` | string | '#FFFFFF' | Background color of the sign |
+| `signTextColor` | string | '#000000' | Color of the text on the sign |
+| `signBorderColor` | string | '#000000' | Border color of the sign |
+
+## PeekingCat
+
+A cat peeking from an edge of the container.
+
+```jsx
+import { PeekingCat } from '@kitty-ui/registry';
+
+<PeekingCat 
+  primaryColor="#4ECDC4"
+  secondaryColor="#FFFFFF"
+  peekFrom="left"
+  peekAmount={0.5}
+  size="medium"
+  emotion="curious"
+  animated={true}
+/>
+```
+
+### Additional Props
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `peekFrom` | 'left' \| 'right' \| 'top' \| 'bottom' | 'left' | Direction from which the cat peeks |
+| `peekAmount` | number | 0.5 | How much of the cat is visible (0-1) |
+
+## FaceOnlyCat
+
+Just the face of a cat.
+
+```jsx
+import { FaceOnlyCat } from '@kitty-ui/registry';
+
+<FaceOnlyCat 
+  primaryColor="#FFD166"
+  secondaryColor="#FFFFFF"
+  showEars={true}
+  size="medium"
+  emotion="happy"
+  animated={true}
+/>
+```
+
+### Additional Props
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `showEars` | boolean | true | Whether to show the cat's ears |
+
+## Common Props
+
+All composition components inherit the same common props as core components:
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `primaryColor` | string | '#000000' | Main color of the cat |
+| `secondaryColor` | string | '#FFFFFF' | Secondary color for details |
+| `size` | 'small' \| 'medium' \| 'large' \| number | 'medium' | Size of the component |
+| `emotion` | string | 'neutral' | Cat's facial expression |
+| `animated` | boolean | false | Whether the cat should be animated |
+| `animationSpeed` | 'slow' \| 'normal' \| 'fast' | 'normal' | Speed of animations |

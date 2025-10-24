@@ -1,0 +1,68 @@
+# Kitty-UI
+
+Welcome to Kitty-UI, an adorable cat-themed React component library!
+
+## Features
+
+- **Customizable Cat Components**: Various cat poses and emotions
+- **Animation Support**: Bring your cats to life with smooth animations
+- **Composition Components**: Special components like cats holding signs
+- **Accessibility**: Built with accessibility in mind
+- **TypeScript Support**: Fully typed components for better developer experience
+
+## Quick Start
+
+Install Kitty-UI using our CLI:
+
+```bash
+# Install the CLI globally
+npm install -g @kitty-ui/cli
+
+# Create a new project with Kitty-UI
+kitty-ui create my-cat-app
+
+# Or add to an existing project
+kitty-ui install --all
+```
+
+Or install directly with npm/yarn/pnpm:
+
+```bash
+npm install @kitty-ui/core @kitty-ui/registry
+```
+
+## Basic Usage
+
+```jsx
+import { SittingCat, HoldingSignCat } from '@kitty-ui/registry';
+
+function App() {
+  return (
+    <div>
+      <SittingCat 
+        primaryColor="#FF6B6B" 
+        emotion="happy" 
+        animated={true} 
+      />
+      
+      <HoldingSignCat 
+        primaryColor="#4ECDC4" 
+        signText="Hello World!" 
+        animated={true} 
+      />
+    </div>
+  );
+}
+```
+
+## Why Kitty-UI?
+
+Kitty-UI adds a touch of playfulness to your applications with adorable cat components. Perfect for:
+
+- Error pages
+- Loading states
+- Empty states
+- Onboarding experiences
+- Any place that needs a bit of feline charm!
+
+Explore the documentation to discover all the components and features available in Kitty-UI.

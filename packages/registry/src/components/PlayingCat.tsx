@@ -12,7 +12,7 @@ export interface PlayingCatProps extends KittyBaseProps {
 export const PlayingCat: React.FC<PlayingCatProps> = ({
   primaryColor = '#FFA500',
   secondaryColor = '#FFFFFF',
-  size = 'medium',
+  size = 'md',
   emotion = 'excited',
   animated = true, // Default to animated for playing cat
   animationSpeed = 'normal',
@@ -21,9 +21,11 @@ export const PlayingCat: React.FC<PlayingCatProps> = ({
 }) => {
   // Calculate size in pixels
   const sizeMap = {
-    small: 100,
-    medium: 150,
-    large: 200,
+    xs: 80,
+    sm: 100,
+    md: 150,
+    lg: 200,
+    xl: 250,
   };
   const pixelSize = typeof size === 'number' ? size : sizeMap[size];
 
@@ -41,6 +43,7 @@ export const PlayingCat: React.FC<PlayingCatProps> = ({
           primaryColor={primaryColor} 
           secondaryColor={secondaryColor}
           pose="playing"
+          size={size}
           animated={animated}
           animationSpeed={animated ? animationSpeed : 'normal'}
         />
@@ -48,6 +51,7 @@ export const PlayingCat: React.FC<PlayingCatProps> = ({
           primaryColor={primaryColor} 
           secondaryColor={secondaryColor}
           pose="playing"
+          size={size}
           animated={animated}
           animationSpeed={animated ? animationSpeed : 'normal'}
         />
@@ -55,6 +59,7 @@ export const PlayingCat: React.FC<PlayingCatProps> = ({
           primaryColor={primaryColor} 
           secondaryColor={secondaryColor}
           pose="playing"
+          size={size}
           animated={animated}
           animationSpeed={animated ? animationSpeed : 'normal'}
         />
@@ -63,6 +68,7 @@ export const PlayingCat: React.FC<PlayingCatProps> = ({
           secondaryColor={secondaryColor}
           emotion={emotion}
           pose="playing"
+          size={size}
           animated={animated}
           animationSpeed={animated ? animationSpeed : 'normal'}
         />

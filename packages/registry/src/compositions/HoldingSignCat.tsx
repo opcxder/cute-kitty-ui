@@ -1,31 +1,45 @@
 import React from 'react';
-import { KittyBaseProps, HoldingSignProps, getColorFromTheme } from '@kitty-ui/core';
+import { KittyBaseProps } from '@kitty-ui/core';
 import { SittingCat } from '../components/SittingCat';
 import { motion } from 'framer-motion';
 
-export interface HoldingSignCatProps extends KittyBaseProps, HoldingSignProps {
+export interface HoldingSignCatProps extends KittyBaseProps {
   emotion?: 'happy' | 'excited' | 'curious';
+  holdingSign?: {
+    content: React.ReactNode;
+    width: number;
+    height: number;
+    backgroundColor?: string;
+    borderColor?: string;
+    rotation?: number;
+    style?: React.CSSProperties;
+  };
 }
 
 export const HoldingSignCat: React.FC<HoldingSignCatProps> = ({
   primaryColor = '#FFA500',
   secondaryColor = '#FFFFFF',
-  size = 'medium',
+  size = 'md',
   emotion = 'happy',
   animated = true,
   animationSpeed = 'normal',
-  signText = 'Hello!',
-  signBackgroundColor = '#FFFFFF',
-  signTextColor = '#000000',
-  signBorderColor = '#000000',
+  holdingSign = {
+    content: 'Hello!',
+    width: 100,
+    height: 60,
+    backgroundColor: '#FFFFFF',
+    borderColor: '#000000',
+  },
   className,
   style,
 }) => {
   // Calculate size in pixels
   const sizeMap = {
-    small: 150,
-    medium: 200,
-    large: 250,
+    xs: 100,
+    sm: 150,
+    md: 200,
+    lg: 250,
+    xl: 300,
   };
   const pixelSize = typeof size === 'number' ? size : sizeMap[size];
   
@@ -85,8 +99,8 @@ export const HoldingSignCat: React.FC<HoldingSignCatProps> = ({
           width="70" 
           height="40" 
           rx="5" 
-          fill={signBackgroundColor} 
-          stroke={signBorderColor}
+          fill={holdingSign.backgroundColor} 
+          stroke={holdingSign.borderColor}
           strokeWidth="2"
         />
         
@@ -96,12 +110,12 @@ export const HoldingSignCat: React.FC<HoldingSignCatProps> = ({
           y="85"
           textAnchor="middle"
           dominantBaseline="middle"
-          fill={signTextColor}
+          fill="#000000"
           fontFamily="Arial, sans-serif"
           fontSize="12"
           fontWeight="bold"
         >
-          {signText}
+          {typeof holdingSign.content === 'string' ? holdingSign.content : 'Hello!'}
         </text>
       </motion.g>
     </svg>

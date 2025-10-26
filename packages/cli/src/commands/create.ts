@@ -143,8 +143,9 @@ export const KittyExample: React.FC = () => {
     console.log(chalk.white(`  cd ${name}`));
     console.log(chalk.white('  npm run dev\n'));
     
-  } catch (error) {
-    spinner.fail(`Failed to create project: ${error.message}`);
+  } catch (error: unknown) {
+    const errorMessage = error instanceof Error ? error.message : String(error);
+    spinner.fail(`Failed to create project: ${errorMessage}`);
     // Clean up on failure
     await fs.remove(projectPath);
     process.exit(1);

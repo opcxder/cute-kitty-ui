@@ -6,13 +6,13 @@ import { CatLegs } from '../parts/CatLegs';
 import { CatTail } from '../parts/CatTail';
 
 export interface SittingCatProps extends KittyBaseProps {
-  emotion?: 'happy' | 'sad' | 'excited' | 'sleepy' | 'curious' | 'angry';
+  // No need to redefine emotion as it's already in KittyBaseProps
 }
 
 export const SittingCat: React.FC<SittingCatProps> = ({
   primaryColor = '#FFA500',
   secondaryColor = '#FFFFFF',
-  size = 'medium',
+  size = 'md',
   emotion = 'happy',
   animated = false,
   animationSpeed = 'normal',
@@ -21,9 +21,11 @@ export const SittingCat: React.FC<SittingCatProps> = ({
 }) => {
   // Calculate size in pixels
   const sizeMap = {
-    small: 100,
-    medium: 150,
-    large: 200,
+    xs: 40,
+    sm: 80,
+    md: 160,
+    lg: 240,
+    xl: 320,
   };
   const pixelSize = typeof size === 'number' ? size : sizeMap[size];
 

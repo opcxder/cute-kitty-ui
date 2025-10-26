@@ -12,7 +12,7 @@ export interface StandingCatProps extends KittyBaseProps {
 export const StandingCat: React.FC<StandingCatProps> = ({
   primaryColor = '#FFA500',
   secondaryColor = '#FFFFFF',
-  size = 'medium',
+  size = 'md',
   emotion = 'curious',
   animated = false,
   animationSpeed = 'normal',
@@ -21,9 +21,11 @@ export const StandingCat: React.FC<StandingCatProps> = ({
 }) => {
   // Calculate size in pixels
   const sizeMap = {
-    small: 100,
-    medium: 150,
-    large: 200,
+    xs: 80,
+    sm: 100,
+    md: 150,
+    lg: 200,
+    xl: 250,
   };
   const pixelSize = typeof size === 'number' ? size : sizeMap[size];
 

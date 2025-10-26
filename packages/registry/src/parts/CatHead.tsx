@@ -1,6 +1,11 @@
 import React from 'react';
-import { CatPartProps } from '@kitty-ui/core';
+import { KittyBaseProps } from '@kitty-ui/core';
 import { motion } from 'framer-motion';
+
+export interface CatPartProps extends KittyBaseProps {
+  pose?: 'sitting' | 'standing' | 'lying' | 'sleeping' | 'playing' | 'peeking';
+  showEars?: boolean;
+}
 
 export const CatHead: React.FC<CatPartProps> = ({
   primaryColor,

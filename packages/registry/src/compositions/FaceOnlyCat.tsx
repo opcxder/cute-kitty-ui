@@ -10,7 +10,7 @@ export interface FaceOnlyCatProps extends KittyBaseProps {
 export const FaceOnlyCat: React.FC<FaceOnlyCatProps> = ({
   primaryColor = '#FFA500',
   secondaryColor = '#FFFFFF',
-  size = 'medium',
+  size = 'md',
   emotion = 'happy',
   animated = false,
   animationSpeed = 'normal',
@@ -20,9 +20,11 @@ export const FaceOnlyCat: React.FC<FaceOnlyCatProps> = ({
 }) => {
   // Calculate size in pixels
   const sizeMap = {
-    small: 60,
-    medium: 100,
-    large: 140,
+    xs: 40,
+    sm: 60,
+    md: 100,
+    lg: 140,
+    xl: 180,
   };
   const pixelSize = typeof size === 'number' ? size : sizeMap[size];
 
@@ -40,6 +42,7 @@ export const FaceOnlyCat: React.FC<FaceOnlyCatProps> = ({
           primaryColor={primaryColor}
           secondaryColor={secondaryColor}
           emotion={emotion}
+          size={size}
           animated={animated}
           animationSpeed={animationSpeed}
           showEars={showEars}

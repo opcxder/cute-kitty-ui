@@ -83,8 +83,9 @@ export async function installComponent(options: InstallOptions): Promise<void> {
       await fs.copy(templatePath, destinationPath);
       
       spinner.succeed(`Installed ${componentName} to ${destinationPath}`);
-    } catch (error) {
-      spinner.fail(`Failed to install ${componentName}: ${error.message}`);
+    } catch (error: unknown) {
+      const errorMessage = error instanceof Error ? error.message : String(error);
+      spinner.fail(`Failed to install ${componentName}: ${errorMessage}`);
     }
   }
 

@@ -1,6 +1,6 @@
 import React from 'react';
-import { CatPartProps } from '@kitty-ui/core';
 import { motion } from 'framer-motion';
+import { CatPartProps } from './CatHead';
 
 export const CatLegs: React.FC<CatPartProps> = ({
   primaryColor,

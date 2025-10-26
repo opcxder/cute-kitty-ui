@@ -12,7 +12,7 @@ export interface SleepingCatProps extends KittyBaseProps {
 export const SleepingCat: React.FC<SleepingCatProps> = ({
   primaryColor = '#FFA500',
   secondaryColor = '#FFFFFF',
-  size = 'medium',
+  size = 'md',
   emotion = 'sleepy',
   animated = false,
   animationSpeed = 'normal',
@@ -21,9 +21,11 @@ export const SleepingCat: React.FC<SleepingCatProps> = ({
 }) => {
   // Calculate size in pixels
   const sizeMap = {
-    small: 120,
-    medium: 180,
-    large: 240,
+    xs: 80,
+    sm: 120,
+    md: 180,
+    lg: 240,
+    xl: 300,
   };
   const pixelSize = typeof size === 'number' ? size : sizeMap[size];
   const height = pixelSize * 0.5; // Sleeping cat is wider than tall

@@ -101,6 +101,77 @@ export function getPositionStyles(props: Pick<KittyBaseProps, 'position' | 'anch
 }
 
 /**
+ * Calculate position styles based on anchor and numeric offset
+ * @deprecated Use getPositionStyles instead
+ */
+export function calculatePositionStyles(
+  anchor: string, 
+  offset: number | { x: number; y: number } = 0
+): React.CSSProperties {
+  const offsetX = typeof offset === 'number' ? offset : offset.x;
+  const offsetY = typeof offset === 'number' ? offset : offset.y;
+  const styles: React.CSSProperties = { position: 'relative' };
+  
+  switch (anchor) {
+    case 'top-left':
+      styles.top = offsetY;
+      styles.left = offsetX;
+      break;
+    case 'top-right':
+      styles.top = offsetY;
+      styles.right = offsetX;
+      break;
+    case 'bottom-left':
+      styles.bottom = offsetY;
+      styles.left = offsetX;
+      break;
+    case 'bottom-right':
+      styles.bottom = offsetY;
+      styles.right = offsetX;
+      break;
+    case 'center':
+      styles.top = '50%';
+      styles.left = '50%';
+      styles.transform = `translate(-50%, -50%) translateX(${offsetX}px) translateY(${offsetY}px)`;
+      break;
+    case 'top-center':
+      styles.top = offsetY;
+      styles.left = '50%';
+      styles.transform = `translateX(-50%)`;
+      break;
+    case 'bottom-center':
+      styles.bottom = offsetY;
+      styles.left = '50%';
+      styles.transform = `translateX(-50%)`;
+      break;
+    case 'left-center':
+      styles.left = offsetX;
+      styles.top = '50%';
+      styles.transform = `translateY(-50%)`;
+      break;
+    case 'right-center':
+      styles.right = offsetX;
+      styles.top = '50%';
+      styles.transform = `translateY(-50%)`;
+      break;
+    case 'top':
+      styles.top = offsetY;
+      break;
+    case 'right':
+      styles.right = offsetX;
+      break;
+    case 'bottom':
+      styles.bottom = offsetY;
+      break;
+    case 'left':
+      styles.left = offsetX;
+      break;
+  }
+  
+  return styles;
+}
+
+/**
  * Check if a part should be shown
  */
 export function shouldShowPart(part: 'head' | 'body' | 'legs' | 'tail', showParts?: KittyBaseProps['showParts']): boolean {

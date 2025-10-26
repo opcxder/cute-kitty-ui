@@ -1,7 +1,8 @@
 {
   "extends": "../../tsconfig.json",
-  "compilerOptions": {
-    "baseUrl": ".",
+"compilerOptions": {
+    "moduleResolution": "bundler",
+    "moduleDetection": "force",
     "paths": {
       "@kitty-ui/registry/*": ["./src/*"],
       "@kitty-ui/core": ["../core/src"]

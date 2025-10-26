@@ -3,16 +3,16 @@ import { KittyBaseProps, calculatePositionStyles } from '@kitty-ui/core';
 import { CatHead } from '../parts/CatHead';
 import { motion } from 'framer-motion';
 
-export interface PeekingCatProps extends KittyBaseProps {
+export interface PeekingCatProps extends Omit<KittyBaseProps, 'anchor' | 'offset'> {
   emotion?: 'happy' | 'sad' | 'excited' | 'sleepy' | 'curious' | 'angry';
-  anchor?: 'top' | 'right' | 'bottom' | 'left' | 'top-right' | 'top-left' | 'bottom-right' | 'bottom-left';
-  offset?: number;
+  anchor?: 'top' | 'right' | 'bottom' | 'left' | 'top-right' | 'top-left' | 'bottom-right' | 'bottom-left' | 'center' | 'top-center' | 'bottom-center' | 'left-center' | 'right-center';
+  offset?: { x: number; y: number } | number;
 }
 
 export const PeekingCat: React.FC<PeekingCatProps> = ({
   primaryColor = '#FFA500',
   secondaryColor = '#FFFFFF',
-  size = 'medium',
+  size = 'md',
   emotion = 'curious',
   animated = true,
   animationSpeed = 'normal',
@@ -23,9 +23,11 @@ export const PeekingCat: React.FC<PeekingCatProps> = ({
 }) => {
   // Calculate size in pixels
   const sizeMap = {
-    small: 80,
-    medium: 120,
-    large: 160,
+    xs: 40,
+    sm: 80,
+    md: 120,
+    lg: 160,
+    xl: 200,
   };
   const pixelSize = typeof size === 'number' ? size : sizeMap[size];
   
@@ -37,7 +39,8 @@ export const PeekingCat: React.FC<PeekingCatProps> = ({
   }[animationSpeed];
 
   // Calculate position based on anchor
-  const positionStyles = calculatePositionStyles(anchor, offset);
+  const offsetValue = typeof offset === 'number' ? { x: offset, y: offset } : offset;
+  const positionStyles = calculatePositionStyles(anchor, offsetValue);
 
   // Animation variants for peeking
   const peekingVariants = {
@@ -74,6 +77,7 @@ export const PeekingCat: React.FC<PeekingCatProps> = ({
           primaryColor={primaryColor}
           secondaryColor={secondaryColor}
           emotion={emotion}
+          size={size}
           animated={animated}
           animationSpeed={animationSpeed}
         />

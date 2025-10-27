@@ -23,10 +23,10 @@ importers:
 
   apps/docs:
     dependencies:
-      '@kitty-ui/core':
+      cute-kitty-ui-core:
         specifier: workspace:*
         version: link:../../packages/core
-      '@kitty-ui/registry':
+      cute-kitty-ui-registry:
         specifier: workspace:*
         version: link:../../packages/registry
       next:
@@ -75,18 +75,18 @@ importers:
 
   packages/cli:
     dependencies:
-      '@kitty-ui/core':
-        specifier: workspace:*
-        version: link:../core
-      '@kitty-ui/registry':
-        specifier: workspace:*
-        version: link:../registry
       chalk:
         specifier: ^4.1.2
         version: 4.1.2
       commander:
         specifier: ^11.0.0
         version: 11.0.0
+      cute-kitty-ui-core:
+        specifier: workspace:*
+        version: link:../core
+      cute-kitty-ui-registry:
+        specifier: workspace:*
+        version: link:../registry
       fs-extra:
         specifier: ^11.1.1
         version: 11.1.1
@@ -146,7 +146,7 @@ importers:
 
   packages/registry:
     dependencies:
-      '@kitty-ui/core':
+      cute-kitty-ui-core:
         specifier: workspace:*
         version: link:../core
       framer-motion:

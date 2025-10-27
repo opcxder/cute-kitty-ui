@@ -1,11 +1,19 @@
 {
   "name": "cute-kitty-ui-registry",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
   "sideEffects": false,
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/opcxder/cute-kitty-ui.git"
+  },
+  "bugs": {
+    "url": "https://github.com/opcxder/cute-kitty-ui/issues"
+  },
+  "homepage": "https://github.com/opcxder/cute-kitty-ui#readme",
   "publishConfig": {
     "access": "public"
   },

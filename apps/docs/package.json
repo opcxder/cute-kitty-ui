@@ -1,5 +1,5 @@
 {
-  "name": "@kitty-ui/docs",
+  "name": "cute-kitty-ui-docs",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -10,8 +10,8 @@
     "clean": "rm -rf .next node_modules"
   },
   "dependencies": {
-    "@kitty-ui/core": "workspace:*",
-    "@kitty-ui/registry": "workspace:*",
+    "cute-kitty-ui-core": "workspace:*",
+    "cute-kitty-ui-registry": "workspace:*",
     "next": "^13.4.4",
     "nextra": "^2.5.2",
     "nextra-theme-docs": "^2.5.2",

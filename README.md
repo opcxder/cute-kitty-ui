@@ -1,9 +1,10 @@
-# 🐱 Kitty-UI
+# 🐱 Cute-Kitty-UI
 
 Adorable cat-themed React components for your web applications.
 
-[![npm version](https://img.shields.io/npm/v/@kitty-ui/registry)](https://www.npmjs.com/package/@kitty-ui/registry)
+[![npm version](https://img.shields.io/npm/v/cute-kitty-ui-cli)](https://www.npmjs.com/package/cute-kitty-ui-cli)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![GitHub Repo](https://img.shields.io/badge/GitHub-Repository-blue)](https://github.com/opcxder/cute-kitty-ui)
 
 ## Features
 
@@ -14,38 +15,44 @@ Adorable cat-themed React components for your web applications.
 - 🚀 **Easy to Use**: Simple API with TypeScript support
 - 🛠️ **CLI Tool**: Quickly add components to your project
 
+## Packages
+
+- [**cute-kitty-ui-cli**](./packages/cli) - CLI tool for adding components to your project
+- [**cute-kitty-ui-core**](./packages/core) - Core utilities, types, and hooks
+- [**cute-kitty-ui-registry**](./packages/registry) - Component source of truth
+
 ## Quick Start
 
 ### Using the CLI
 
 ```bash
 # Install the CLI globally
-npm install -g @kitty-ui/cli
+npm install -g cute-kitty-ui-cli
 
-# Create a new project with Kitty-UI
-kitty-ui create my-cat-app
+# Create a new project with Cute-Kitty-UI
+cute-kitty-ui-cli create my-cat-app
 
 # Or add to an existing project
-kitty-ui install --all
+cute-kitty-ui-cli install --all
 ```
 
 ### Manual Installation
 
 ```bash
 # Using npm
-npm install @kitty-ui/core @kitty-ui/registry
+npm install cute-kitty-ui-core cute-kitty-ui-registry
 
 # Using yarn
-yarn add @kitty-ui/core @kitty-ui/registry
+yarn add cute-kitty-ui-core cute-kitty-ui-registry
 
 # Using pnpm
-pnpm add @kitty-ui/core @kitty-ui/registry
+pnpm add cute-kitty-ui-core cute-kitty-ui-registry
 ```
 
 ## Basic Usage
 
 ```jsx
-import { SittingCat, HoldingSignCat } from '@kitty-ui/registry';
+import { SittingCat, HoldingSignCat } from 'cute-kitty-ui-registry';
 
 function App() {
   return (

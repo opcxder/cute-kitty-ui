@@ -1,5 +1,5 @@
 {
-  "name": "@kitty-ui/registry",
+  "name": "cute-kitty-ui-registry",
   "version": "0.1.0",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
@@ -41,6 +41,6 @@
     }
   },
   "dependencies": {
-    "@kitty-ui/core": "workspace:*"
+    "cute-kitty-ui-core": "workspace:*"
   }
 }

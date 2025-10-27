@@ -1,6 +1,6 @@
-# Contributing to Kitty-UI
+# Contributing to Cute-Kitty-UI
 
-Thank you for your interest in contributing to Kitty-UI! This document provides guidelines and instructions for contributing to this project.
+Thank you for your interest in contributing to Cute-Kitty-UI! This document provides guidelines and instructions for contributing to this project.
 
 ## Code of Conduct
 
@@ -40,8 +40,8 @@ We welcome feature suggestions! Please create an issue with:
 
 1. Clone the repository
 ```bash
-git clone https://github.com/opcxder/kitty-ui.git
-cd kitty-ui
+git clone https://github.com/opcxder/cute-kitty-ui.git
+cd cute-kitty-ui
 ```
 
 2. Install dependencies

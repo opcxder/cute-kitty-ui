@@ -1,11 +1,11 @@
 {
-  "name": "@kitty-ui/cli",
+  "name": "cute-kitty-ui-cli",
   "version": "0.1.0",
-  "description": "CLI tool for installing Kitty-UI components",
+  "description": "CLI tool for installing Cute-Kitty-UI components",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "bin": {
-    "kitty-ui": "./dist/index.js"
+    "cute-kitty-ui": "./dist/index.js"
   },
   "scripts": {
     "build": "tsup",
@@ -19,14 +19,14 @@
     "templates"
   ],
   "keywords": [
-    "kitty-ui",
+    "cute-kitty-ui",
     "cli",
     "react",
     "components"
   ],
   "dependencies": {
-    "@kitty-ui/core": "workspace:*",
-    "@kitty-ui/registry": "workspace:*",
+    "cute-kitty-ui-core": "workspace:*",
+    "cute-kitty-ui-registry": "workspace:*",
     "chalk": "^4.1.2",
     "commander": "^11.0.0",
     "fs-extra": "^11.1.1",

@@ -36,7 +36,7 @@ export async function createProject(name: string, options: CreateOptions): Promi
       // Install dependencies
       spinner.text = 'Installing dependencies...';
       process.chdir(projectPath);
-      execSync('npm install @kitty-ui/core @kitty-ui/registry', { stdio: 'ignore' });
+      execSync('npm install cute-kitty-ui-core cute-kitty-ui-registry', { stdio: 'ignore' });
       
       // Create components directory
       await fs.ensureDir(path.join(projectPath, 'src/components'));
@@ -45,7 +45,7 @@ export async function createProject(name: string, options: CreateOptions): Promi
       const exampleComponentPath = path.join(projectPath, 'src/components/KittyExample.tsx');
       await fs.writeFile(exampleComponentPath, `
 import React from 'react';
-import { SittingCat, HoldingSignCat } from '@kitty-ui/registry';
+import { SittingCat, HoldingSignCat } from 'cute-kitty-ui-registry';
 
 export const KittyExample: React.FC = () => {
   return (
@@ -88,7 +88,7 @@ export const KittyExample: React.FC = () => {
       // Install dependencies
       spinner.text = 'Installing dependencies...';
       process.chdir(projectPath);
-      execSync('npm install @kitty-ui/core @kitty-ui/registry', { stdio: 'ignore' });
+      execSync('npm install cute-kitty-ui-core cute-kitty-ui-registry', { stdio: 'ignore' });
       
       // Create components directory
       await fs.ensureDir(path.join(projectPath, 'src/components'));
@@ -99,7 +99,7 @@ export const KittyExample: React.FC = () => {
 'use client';
 
 import React from 'react';
-import { SittingCat, HoldingSignCat } from '@kitty-ui/registry';
+import { SittingCat, HoldingSignCat } from 'cute-kitty-ui-registry';
 
 export const KittyExample: React.FC = () => {
   return (

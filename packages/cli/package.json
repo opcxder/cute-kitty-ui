@@ -1,6 +1,6 @@
 {
   "name": "cute-kitty-ui-cli",
-  "version": "0.1.2",
+  "version": "1.0.0",
   "description": "CLI tool for installing Cute-Kitty-UI components",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

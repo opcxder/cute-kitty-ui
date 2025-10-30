@@ -1,6 +1,6 @@
 {
   "name": "cute-kitty-ui-registry",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
@@ -49,6 +49,6 @@
     }
   },
   "dependencies": {
-    "cute-kitty-ui-core": "^3.0.0"
+    "cute-kitty-ui-core": "^3.0.1"
   }
 }

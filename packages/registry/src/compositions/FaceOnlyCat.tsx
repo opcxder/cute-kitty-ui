@@ -1,5 +1,5 @@
 import React from 'react';
-import { KittyBaseProps } from '@kitty-ui/core';
+import { KittyBaseProps } from 'cute-kitty-ui-core';
 import { CatHead } from '../parts/CatHead';
 
 export interface FaceOnlyCatProps extends KittyBaseProps {

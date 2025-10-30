@@ -1,5 +1,5 @@
 import React from 'react';
-import { KittyBaseProps, calculatePositionStyles } from '@kitty-ui/core';
+import { KittyBaseProps, calculatePositionStyles } from 'cute-kitty-ui-core';
 import { CatHead } from '../parts/CatHead';
 import { motion } from 'framer-motion';
 

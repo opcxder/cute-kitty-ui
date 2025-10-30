@@ -1,5 +1,5 @@
 import React from 'react';
-import { KittyBaseProps } from '@kitty-ui/core';
+import { KittyBaseProps } from 'cute-kitty-ui-core';
 import { CatHead } from '../parts/CatHead';
 import { CatBody } from '../parts/CatBody';
 import { CatLegs } from '../parts/CatLegs';

@@ -72,11 +72,11 @@ export default function MyComponent() {
 
 ## Documentation
 
-For full documentation, visit [cute-kitty-ui.dev](https://cute-kitty-ui.dev)
+For full documentation, visit [cute-kitty-ui](https://cute-kitty-ui-docs.vercel.app/)
 
 ## Contributing
 
-We welcome contributions! Please see our [Contributing Guide](../../CONTRIBUTING.md) for more details.
+We welcome contributions! Please see our [Contributing Guide](https://github.com/opcxder/cute-kitty-ui/blob/main/CONTRIBUTING.md) for more details.
 
 ## License
 

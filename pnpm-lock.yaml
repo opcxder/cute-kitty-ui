@@ -88,10 +88,10 @@ importers:
         specifier: ^11.0.0
         version: 11.0.0
       cute-kitty-ui-core:
-        specifier: workspace:*
+        specifier: ^3.0.2
         version: link:../core
       cute-kitty-ui-registry:
-        specifier: workspace:*
+        specifier: ^3.0.2
         version: link:../registry
       fs-extra:
         specifier: ^11.1.1
@@ -153,7 +153,7 @@ importers:
   packages/registry:
     dependencies:
       cute-kitty-ui-core:
-        specifier: workspace:*
+        specifier: ^3.0.2
         version: link:../core
       framer-motion:
         specifier: ^11.0.0

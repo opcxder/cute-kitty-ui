@@ -1,6 +1,6 @@
 {
   "name": "cute-kitty-ui-cli",
-  "version": "3.0.2",
+  "version": "3.0.3",
   "description": "CLI tool for installing Cute-Kitty-UI components",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -19,7 +19,7 @@
     "build": "tsup",
     "dev": "tsup --watch",
     "lint": "eslint src/**/*.ts",
-    "clean": "rm -rf dist node_modules",
+    "clean": "rimraf dist node_modules",
     "test": "vitest run"
   },
   "files": [
@@ -33,8 +33,8 @@
     "components"
   ],
   "dependencies": {
-    "cute-kitty-ui-core": "^3.0.2",
-    "cute-kitty-ui-registry": "^3.0.2",
+    "cute-kitty-ui-core": "^3.0.3",
+    "cute-kitty-ui-registry": "^3.0.3",
     "chalk": "^4.1.2",
     "commander": "^11.0.0",
     "fs-extra": "^11.1.1",
